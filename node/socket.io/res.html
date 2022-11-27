@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="./res.js"></script> -->
+</head>
+<body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        let socket = io()
+    </script>
+    <input type="text" id="msg" placeholder="write a msg">
+    <button onclick="btn()">send msg</button>
+    <h2 id="response"></h2>
+    <script>
+        function btn(){
+            socket.emit('msg'," ")
+        }
+        socket.on('res',(data)=>{
+            let response=document.getElementById("response")
+            response.innerHTML=data
+            //alert(data)
+        })
+    </script>
+</body>
+</html>

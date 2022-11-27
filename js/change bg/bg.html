@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="bg">
+    <div>
+        <img src="http://ncs.cd.gov.mn/wp-content/themes/icetheme/assets/images/no-image-small.png" id="img" style="width: 120px;">
+    </div>
+    <script>
+        let img=document.getElementById("img")
+        img.addEventListener('mouseover',()=>{
+            let bg=document.getElementById("bg")
+            bg.style.backgroundColor='red'
+        })
+        img.addEventListener('mouseout',()=>{
+            let bg=document.getElementById("bg")
+            bg.style.backgroundColor='blue'
+        })
+    </script>
+</body>
+</html>
